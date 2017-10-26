@@ -16,18 +16,20 @@
 	<meta http-equiv="Pragma" content="no-cache">
 	<link rel="stylesheet" type="text/css" href="css/com.css"/>
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css">
+    <script type="text/javascript" charset="utf-8" src="http://yuntv.letv.com/player/vod/bcloud.js"></script>
 </head>
 
 	<body>
 		<div id="wrapper">
 			<header id="comHeader">
 				<div class="menu clearfloat">
-					<dl style="display: none;">
+					<dl style="display: block;">
 						<dd><a href="javascript:;" class="fl login dlbtn"> 登陆 </a><a href="javascript:;" class="fl sign"> 注册 </a></dd>
 					</dl>
 
 					<!-- 登陆后 -->
-					<dl style="display: block;">
+					<dl style="display: none;">
 						<dd><a href="javascript:;" class="fl username">账号: <span class="">xxxx</span></a> <a href="javascript:;" class="fl logout"> 退出 </a></dd>
 					</dl>
 				</div>
@@ -35,7 +37,7 @@
 					<!-- 视频WGL -->
 					<div class="video fl">
                         <p class="btn pos btn_video ani"></p>
-                        <span class="btn icon_videoPlay"></span>
+                        <span class="btn icon_videoPlay vBtn"  data-url='http://yuntv.letv.com/bcloud.swf?uu=661c07e19e&vu=0d11e61e4f&auto_play=1&gpcflag=1&lang=zh_CN'></span>
                     </div>
 				</div>
 			</header>
@@ -46,38 +48,277 @@
                     </div>
 
                     <div class="date">
-                       <div class="w_11">
-                            <!-- 时间轴 -->
-                            <div class="date_t_w">
-                                <dl class="date_time active sprite">
-                                    <dt>10月31日</dt>
-                                    <dd>中国区预选赛</dd>
+                        <dl class="time_saishi w_11">
+                            <div class="after"></div>
+                            <dd class="active"> <p class="day">10月31日</p><p class="icon_dd"></p><p class="time_txt">中国区预选赛</p>  </dd>
+                            <dd> <p class="day">11月6日 - 11月7日</p><p class="icon_dd"></p><p class="time_txt">中国区淘汰赛8进4</p>  </dd>
+                            <dd> <p class="day">11月8日 - 11月10日</p><p class="icon_dd"></p><p class="time_txt">中国区总决赛</p>  </dd>
+                            <dd> <p class="day">12月13日 - 11月17日</p><p class="icon_dd"></p><p class="time_txt">WGL全球总决赛</p>  </dd>
+                            <dd> <p class="day">12月23日</p><p class="icon_dd"></p><p class="time_txt">WG Fest嘉年华&WGL冠亚军争夺战</p>  </dd>
+                        </dl>
+                    </div>
+                </div>
+				<div class="b2">
+					<!-- 嘉年华定制 皮肤 -->
+                    <div class="w_11">
+                        <h2 class="hdTit "><img class="tm2" src="images/t2.png" alt=""></h2>
+                    </div>
+                    <div class="date">
+                        <div class="w_11 bor">
+                            <p class="pic1"><img src="images/pic1.png" alt=""></p>
+
+                            <div class="cc">
+                                <div class="tabList fl">
+                                    <ul>
+                                        <li class="curr">
+                                            <div class="team"><img src="images/icon1.png" alt=""></div>
+                                            <p>P&P.虎豹骑</p>
+                                        </li>
+                                        <li>
+                                            <div class="team"><img src="images/icon2.png" alt=""></div>
+                                            <p>JZBA.酷冷至尊</p>
+                                        </li>
+                                        <li>
+                                            <div class="team">icon3</div>
+                                            <p>战队名3战队名3</p>
+                                        </li>
+                                        <li>
+                                            <div class="team">icon4</div>
+                                            <p>战队名4</p>
+                                        </li>
+                                        <li>
+                                            <div class="team">icon5</div>
+                                            <p>战队名5</p>
+                                        </li>
+                                        <li>
+                                            <div class="team">icon6</div>
+                                            <p>战队名6</p>
+                                        </li>
+                                        <li>
+                                            <div class="team">icon7</div>
+                                            <p>战队名7</p>
+                                        </li>
+                                        <li>
+                                            <div class="team">icon8</div>
+                                            <p>战队名8</p>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <dl class="btn_tijiao fr">
+                                    <dd>提交</dd>
+                                    <dd>领取定制皮肤</dd>
                                 </dl>
-                                <dl class="date_time sprite">
-                                    <dt>10月31日</dt>
-                                    <dd>中国区淘汰赛8进4</dd>
-                                </dl>
-                                <dl class="date_time sprite">
-                                    <dt>10月31日</dt>
-                                    <dd>中国区总决赛</dd>
-                                </dl>
-                                <dl class="date_time sprite">
-                                    <dt>10月31日</dt>
-                                    <dd>WGL全球总决赛</dd>
-                                </dl>
-                                <dl class="date_time sprite">
-                                    <dt>10月31日</dt>
-                                    <dd>WG Fest嘉年华&WGL冠亚军争夺战</dd>
-                                </dl>
+                                <div class="clearfloat"></div>
+                                <div class="b3Txt">
+                                     <div class="gz">
+                                        <p>关注2017 WGL冬季全球总决赛中国区预选赛，参与“冠亚军竞猜”活动，赢取限量订制涂装！</p>
+                                        <dl>
+                                            <dt>【参与方式】</dt>
+                                            <dd>1、在专题页上登录游戏账号。</dd>
+                                            <dd>2、勾选你认为的中国区预选赛冠亚军，点击“提交”按钮，即可完成竞猜。</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>【活动时间】</dt>
+                                            <dd>2017年11月01日—2017年11月10日12:00。</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>【领取方式】</dt>
+                                            <dd>1、竞猜活动结束后（11月11日00:00）在专题页登录游戏参与过竞猜活动的游戏账号。</dd>
+                                            <dd>2、竞猜成功的玩家，通过点击“领取订制皮肤”即可以获得两个订制涂装；未竞猜成功的玩家，可获得一个订制涂装。</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>【活动对象】</dt>
+                                            <dd>本活动针对《坦克世界》国服所有玩家。</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>【奖励说明】</dt>
+                                            <dd>1、 奖励针对《坦克世界》国服所有玩家。</dd>
+                                            <dd>2、 每个ID只能参与一次竞猜活动。</dd>
+                                            <dd>3、奖励最晚于活动截止后7个工作日到账。</dd>
+                                        </dl>
+                                     </div>
+                                </div>
                             </div>
-                            <p class="time"><img src="images/time.png" alt=""></p>
+
+
+                        </div>
+                    </div>
+				</div>
+
+                <div class="b3">
+                    <div class="w_11">
+                        <h2 class="hdTit "><img class="tm3" src="images/t3.png" alt=""></h2>
+                    </div>
+
+                    <div class="date">
+                         <!-- 赛事进程 -->
+                        <div class="tabEvent w_11">
+                            <div class="tabEvent_list">
+                                <ul>
+                                    <li class="curr">中国区淘汰赛</li>
+                                    <li>中国区总决赛</li>
+                                    <li>全球小组赛</li>
+                                    <li>全球总决赛</li>
+                                </ul>
+                            </div>
+                            <div class="tabBox">
+                                <div class="box">
+                                    <dl class="dl_taotai">
+                                        <dt class="fl">11月6日</dt>
+                                        <dd class="fr">
+                                            <p>
+                                                <span><i><img src="images/tk.png" alt=""></i><b>战队名战队名战队名</b></span>
+                                                <span><i><img src="images/tk.png" alt=""></i><b>战队名战队名战队名</b></span>
+                                            </p>
+                                        </dd>
+                                        <dd class="fr">
+                                            <p>
+                                                <span><i><img src="images/tk.png" alt=""></i><b>战队名战队名战队名</b></span>
+                                                <span><i><img src="images/tk.png" alt=""></i><b>战队名战队名战队名</b></span>
+                                            </p>
+                                        </dd>
+                                    </dl>
+                                    <dl class="dl_taotai">
+                                        <dt class="fl">11月6日</dt>
+                                        <dd class="fr">
+                                            <p>
+                                                <span><i><img src="images/tk.png" alt=""></i><b>战队名战队名战队名</b></span>
+                                                <span><i><img src="images/tk.png" alt=""></i><b>战队名战队名战队名</b></span>
+                                            </p>
+                                        </dd>
+                                        <dd class="fr">
+                                            <p>
+                                                <span><i><img src="images/tk.png" alt=""></i><b>战队名战队名战队名</b></span>
+                                                <span><i><img src="images/tk.png" alt=""></i><b>战队名战队名战队名</b></span>
+                                            </p>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="box">
+                                    <!-- 中国区总决赛 -->
+                                    <div class="content_5">
+                                        <div class="china">
+                                            <dl class="dl_pa1">
+                                                <dt>11月8日</dt>
+                                                <dd>
+                                                    <p class="pos p_8"><img src="images/icon3.png" alt=""> <span>战队名</span> </p>
+                                                    <p class="pos p_9"><img src="images/icon3.png" alt=""> <span>战队名</span> </p>
+                                                    <p class="pos p_10"><img src="images/icon3.png" alt=""> <span>战队名</span> </p>
+                                                    <p class="pos p_11"><img src="images/icon3.png" alt=""> <span>战队名</span> </p>
+                                                </dd>
+                                            </dl>
+                                            <dl class="dl_pa2">
+                                                <dt>11月9日</dt>
+                                                <dd>
+                                                    <p class="pos p_12"><img src="images/icon3.png" alt=""> <span>战队名战队名</span> </p>
+                                                    <p class="pos p_13"><img src="images/icon3.png" alt=""> <span>战队名</span> </p>
+                                                </dd>
+                                            </dl>
+                                            <dl class="dl_pa3">
+                                                <dt>11月10日</dt>
+                                                <dd>
+                                                    <p class="pos p_14"><img src="images/icon3.png" alt=""> <span>战队名战队名战队名</span> </p>
+                                                </dd>
+                                            </dl>
+                                            <dl class="dl_pa4">
+                                                <dt>11月11日</dt>
+                                                <dd>
+                                                    <p class="pos p_15"><img src="images/icon3.png" alt=""> <span>战队名战队名战队名战队名</span> </p>
+                                                </dd>
+                                            </dl>
+                                            <dl class="dl_pa5">
+                                                <dt>11月12日</dt>
+                                                <dd>
+                                                    <p class="pos p_16"><img src="images/icon3.png" alt=""> <span>战队名</span> </p>
+                                                    <p class="pos p_17"><img src="images/icon3.png" alt=""> <span>战队名</span> </p>
+                                                </dd>
+                                            </dl>
+                                            <dl class="dl_pa6">
+                                                <dt>11月13日</dt>
+                                                <dd>
+                                                    <p class="pos p_18"><img src="images/icon3.png" alt=""> <span>战队名</span> </p>
+                                                    <p class="pos p_19"><img src="images/icon3.png" alt=""> <span>战队名</span> </p>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <!-- 小组赛 -->
+                                    <div class="ss_xiaozu">
+                                        <dl>
+                                            <dt>#&nbsp;&nbsp;A 组</dt>
+                                            <dd>
+                                                <p><i>1</i><span>战队1战队1战队1战队1战队1战队1战队1战队1战队1战队1战队1战队1</span></p>
+                                                <p><i>2</i><span>战队2</span></p>
+                                                <p><i>3</i><span>战队3</span></p>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>#&nbsp;&nbsp;A 组</dt>
+                                            <dd>
+                                                <p><i>1</i><span>战队1</span></p>
+                                                <p><i>2</i><span>战队2</span></p>
+                                                <p><i>3</i><span>战队3</span></p>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>#&nbsp;&nbsp;A 组</dt>
+                                            <dd>
+                                                <p><i>1</i><span>战队1战队1战队1战队1战队1战队1战队1战队1战队1战队1战队1战队1</span></p>
+                                                <p><i>2</i><span>战队2</span></p>
+                                                <p><i>3</i><span>战队3</span></p>
+                                            </dd>
+                                        </dl>
+                                        <dl class="dl_last">
+                                            <dt>#&nbsp;&nbsp;A 组</dt>
+                                            <dd>
+                                                <p><i>1</i><span>战队1</span></p>
+                                                <p><i>2</i><span>战队2</span></p>
+                                                <p><i>3</i><span>战队3</span></p>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="content_5">
+                                        <div class="gl_4">
+                                            <dl class="pos p1">
+                                                <dd> <p>战队名战队名战队名战队名</p> <span class="victory">0</span> </dd>
+                                                <dd> <p>战队名</p> <span class="failure">1</span> </dd>
+                                            </dl>
+                                            <dl class="pos p2">
+                                                <dd> <p>战队名战队名战队名战队名</p> <span class="victory">0</span> </dd>
+                                                <dd> <p>战队名</p> <span class="failure">1</span> </dd>
+                                            </dl>
+                                            <dl class="pos p3">
+                                                <dd> <p>战队名战队名战队名战队名</p> <span class="victory">0</span> </dd>
+                                                <dd> <p>战队名</p> <span class="failure">1</span> </dd>
+                                            </dl>
+                                            <dl class="pos p4">
+                                                <dd> <p>战队名战队名战队名战队名</p> <span class="victory">0</span> </dd>
+                                                <dd> <p>战队名</p> <span class="failure">1</span> </dd>
+                                            </dl>
+                                            <dl class="pos p5">
+                                                <dd> <p>战队名战队名战队名战队名</p> <span class="victory">0</span> </dd>
+                                                <dd> <p>战队名</p> <span class="failure">1</span> </dd>
+                                            </dl>
+                                            <dl class="pos p6">
+                                                <dd> <p>战队名战队名战队名战队名</p> <span class="victory">0</span> </dd>
+                                                <dd> <p>战队名</p> <span class="failure">1</span> </dd>
+                                            </dl>
+                                            <dl class="pos p7">
+                                                <dd> <p>战队名战队名战队名战队名</p> <span class="victory">0</span> </dd>
+                                                <dd> <p>战队名</p> <span class="failure">1</span> </dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-				<div class="">
-					<!-- 嘉年华定制 皮肤 -->
-				</div>
-
 				<div class="b6">
                     <div class="w_11">
                         <h2 class="hdTit"><img class="tm4" src="images/t4.png" alt=""></h2>
@@ -104,6 +345,7 @@
 		</div>
 
 		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
 		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/style.js" type="text/javascript" charset="utf-8"></script>
 	</body>
